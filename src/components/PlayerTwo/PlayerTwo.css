@@ -1,0 +1,8 @@
+.player-two-title, .jadalynn {
+  display: flex;
+  flex-direction: column;
+  color: rgb(22, 98, 86);
+  font-size: 20px;
+  align-content: center;
+  align-items: flex-end;
+}
