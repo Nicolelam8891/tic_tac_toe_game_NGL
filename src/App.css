@@ -1,9 +1,8 @@
 .app {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
-.player-one, .header, .player-two {
-  flex: 1;
-}
+
+

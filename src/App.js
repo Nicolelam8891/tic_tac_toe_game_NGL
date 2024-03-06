@@ -7,12 +7,18 @@ import Board from './components/Board/Board';
 
 function App() {
   return (
-    <div className='app'>
-      <PlayerOne />
-      <Header />
-      <PlayerTwo />
-      <Board />
-    </div>
+    <main className='app'>
+      <div className="left-sidebar">
+        <PlayerOne />
+      </div>
+      <div className="main-content">
+        <Header /> 
+        <Board />
+      </div>
+      <div className="right-sidebar">
+        <PlayerTwo />
+      </div>
+  </main>
   );
 }
 

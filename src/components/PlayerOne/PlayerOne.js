@@ -3,8 +3,8 @@ import './PlayerOne.css'
 const PlayerOne = () => {
   return (
     <main className='player-one'>
-      <h2 className='player-one-title'>Player One</h2>
-      <p className='baby'>🐉</p>
+      <h2 className='player-one-title'>Player 1</h2>
+      <p className='jadalynn'>🐯</p>
     </main>
   )
 }

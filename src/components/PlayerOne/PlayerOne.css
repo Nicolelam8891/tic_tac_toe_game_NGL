@@ -1,8 +1,17 @@
-.player-one-title, .baby {
+.player-one-title, .jadalynn {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   color: rgb(22, 98, 86);
-  font-size: 20px;
+  font-size: 30px;
   align-content: center;
   justify-content: center;
+}
+
+.player-one {
+  display: flex;
+  flex-direction: column;
+}
+
+.jadalynn {
+  font-size: 60px;
 }

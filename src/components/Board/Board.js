@@ -6,12 +6,10 @@ const Board = () => {
   const [isTurn, setIsTurn] = useState(true)
 
  const handleClick = (squareIndex) => {
-  if (squares[squareIndex]) {
+  if (squares[squareIndex]) { //return & do nothing 
     return; 
   }
-
-    const newSquares = [...squares]
-    console.log('newSquares', newSquares)
+    const newSquares = [...squares] //create copy of current squares state. Create new array to update state & avoid directly mutating state.
 
     newSquares[squareIndex] = isTurn ? '🐯' : '🐉'
 
@@ -21,7 +19,11 @@ const Board = () => {
 
 return (
   <div className='board'>
-
+   {squares.map((square, index) => (
+    <button key={index} className='square' onClick={() => handleClick(index)}>
+      {square}
+    </button>
+   ))}
   </div>
 )
 };
