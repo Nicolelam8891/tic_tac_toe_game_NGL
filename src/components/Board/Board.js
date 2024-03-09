@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import './Board.css';
 
-const Board = () => {
-  const [squares, setSquares] = useState(Array(9).fill(null));
-  const [isTurn, setIsTurn] = useState(true)
+const Board = ({isTurn, setIsTurn, squares, setSquares}) => {
 
  const handleClick = (squareIndex) => {
   if (squares[squareIndex]) { //return & do nothing 
@@ -17,14 +15,15 @@ const Board = () => {
     setIsTurn(!isTurn);
  }
 
+
 return (
-  <div className='board'>
+  <main className='board'>
    {squares.map((square, index) => (
     <button key={index} className='square' onClick={() => handleClick(index)}>
       {square}
     </button>
    ))}
-  </div>
+  </main>
 )
 };
 

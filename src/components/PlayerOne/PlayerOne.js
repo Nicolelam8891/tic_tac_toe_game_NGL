@@ -1,10 +1,20 @@
 import './PlayerOne.css'
+import Board from '../Board/Board';
 
-const PlayerOne = () => {
+const PlayerOne = ( {setSquares, setIsTurn} ) => {
+  
+  const handleNewGame = () => {
+    setSquares(Array(9).fill(null))
+    setIsTurn(true)
+   }
+
   return (
     <main className='player-one'>
       <h2 className='player-one-title'>Player 1</h2>
       <p className='jadalynn'>🐯</p>
+      <div className='new-game-section'>
+        <button className='new-game' onClick={() => handleNewGame()}>New Game</button>
+      </div>
     </main>
   )
 }

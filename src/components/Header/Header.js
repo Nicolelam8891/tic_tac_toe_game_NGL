@@ -2,9 +2,9 @@ import './Header.css'
 
 const Header = () => {
   return (
-    <div className='header'>
+    <main className='header'>
       <h1 className='title'>TIC TAC TOE</h1>
-    </div>
+    </main>
   )
 }
 
