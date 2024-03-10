@@ -1,10 +1,12 @@
 .player-two-title, .baby {
   display: flex;
   flex-direction: row;
-  color: rgb(22, 98, 86);
-  font-size: 30px;
+  color: rgb(238, 193, 234);
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+  font-size: 35px;
   align-content: center;
   justify-content: center;
+  font-family: fantasy;
 }
 
 .player-two {
@@ -13,5 +15,5 @@
 }
 
 .baby {
-  font-size: 60px;
+  font-size: 100px;
 }

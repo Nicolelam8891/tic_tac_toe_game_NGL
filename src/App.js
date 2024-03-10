@@ -14,7 +14,15 @@ function App() {
   const [winner, setWinner] = useState(null);
   const [showConfetti, setShowConfetti] = useState(false);
 
-
+useEffect(() => {
+  const currentWinner = checkForWinner(squares); 
+  if (currentWinner && currentWinner !== winner) {
+    setWinner(currentWinner);
+    setShowConfetti(true);
+  } else if(!currentWinner) {
+    setShowConfetti(false)
+  }
+}, [squares, winner])
 
   const checkForWinner = (squares) => {
     const lines = [
@@ -27,15 +35,16 @@ function App() {
       [0, 4, 8], 
       [2, 4, 6]
     ];
-      //destructure arrays into variables 
+
       for (let i = 0; i < lines.length; i++) {
         const [a, b, c] = lines[i];
         if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
           return squares[a]
         }
       } 
-    return null; //when there is no winner
+    return null; 
     }
+    
   return (
     <main className='app'>
       {winner && <Confetti />}
