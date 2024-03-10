@@ -1,20 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header/Header';
 import PlayerOne from './components/PlayerOne/PlayerOne';
 import PlayerTwo from './components/PlayerTwo/PlayerTwo';
 import Board from './components/Board/Board';
+import Confetti from 'react-confetti'
 
 function App() {
   const [squares, setSquares] = useState(Array(9).fill(null));
   const [isTurn, setIsTurn] = useState(true)
   const [scores, setScores] = useState({playerOne: 0, playerTwo: 0})
+  const [winner, setWinner] = useState(null);
+  const [showConfetti, setShowConfetti] = useState(false);
+
+
 
   const checkForWinner = (squares) => {
     const lines = [
       [0, 1, 2], 
-      [3, 4, 5]
+      [3, 4, 5],
       [6, 7, 8], 
       [0, 3, 6], 
       [1, 4, 7], 
@@ -33,12 +38,14 @@ function App() {
     }
   return (
     <main className='app'>
+      {winner && <Confetti />}
+      {winner && <div className='winner-message'>{`Player ${winner} wins!`}</div>}
       <div className="left-sidebar">
-        <PlayerOne setSquares={setSquares} setIsTurn={setIsTurn}/>
+        <PlayerOne setSquares={setSquares} setIsTurn={setIsTurn} setShowConfetti={setShowConfetti} setWinner={setWinner}/>
       </div>
       <div className="main-content">
         <Header /> 
-        <Board squares={squares} setSquares={setSquares} isTurn={isTurn} setIsTurn={setIsTurn}/>
+        <Board squares={squares} setSquares={setSquares} isTurn={isTurn} setIsTurn={setIsTurn} checkForWinner={checkForWinner} setWinner={setWinner}/>
       </div>
       <div className="right-sidebar">
         <PlayerTwo />

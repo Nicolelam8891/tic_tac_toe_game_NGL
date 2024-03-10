@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './Board.css';
+import { useEffect } from 'react';
 
-const Board = ({isTurn, setIsTurn, squares, setSquares}) => {
+const Board = ({isTurn, setIsTurn, squares, setSquares, checkForWinner, setWinner}) => {
 
  const handleClick = (squareIndex) => {
   if (squares[squareIndex]) { //return & do nothing 
@@ -14,6 +15,13 @@ const Board = ({isTurn, setIsTurn, squares, setSquares}) => {
     setSquares(newSquares);
     setIsTurn(!isTurn);
  }
+ 
+ useEffect(() => {
+  const winner = checkForWinner(squares);
+  if (winner) {
+    setWinner(winner);
+  }
+}, [squares, checkForWinner]);
 
 
 return (

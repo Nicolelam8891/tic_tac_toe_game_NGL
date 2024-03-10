@@ -1,11 +1,13 @@
 import './PlayerOne.css'
 import Board from '../Board/Board';
 
-const PlayerOne = ( {setSquares, setIsTurn} ) => {
+const PlayerOne = ( {setSquares, setIsTurn, setShowConfetti, setWinner} ) => {
   
   const handleNewGame = () => {
     setSquares(Array(9).fill(null))
     setIsTurn(true)
+    setWinner(null);
+    setShowConfetti(false);
    }
 
   return (
