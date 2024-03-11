@@ -8,10 +8,11 @@
 .square {
   background: rgb(231, 223, 248);
   border: 2px solid rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.5);
   height: 150px;
   width: 150px;
   padding: 20px;
-  font-size: 32px;
+  font-size: 60px;
   cursor: pointer;
   display: flex;
   justify-content: center;
