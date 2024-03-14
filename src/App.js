@@ -66,7 +66,7 @@ useEffect(() => {
         <PlayerOne scores={scores.playerOne} setSquares={setSquares} setIsTurn={setIsTurn} setShowConfetti={setShowConfetti} setWinner={setWinner}/>
       </div>
       <div className="main-content">
-        <Header /> 
+        <Header setSquares={setSquares} setIsTurn={setIsTurn} setWinner={setWinner} setShowConfetti={setShowConfetti}/> 
         <Board squares={squares} setSquares={setSquares} isTurn={isTurn} setIsTurn={setIsTurn} checkForWinner={checkForWinner} setShowConfetti={setShowConfetti} setWinner={setWinner}/>
       </div>
       <div className="right-sidebar">
