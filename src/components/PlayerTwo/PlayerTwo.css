@@ -18,3 +18,13 @@
   font-size: 100px;
 }
 
+.player-score {
+  display: flex;
+  flex-direction: row;
+  color: rgb(142, 216, 234);
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+  font-size: 30px;
+  align-content: center;
+  justify-content: center;
+  font-family: fantasy;
+}

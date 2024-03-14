@@ -1,4 +1,6 @@
 .header {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -7,8 +9,22 @@
 }
 
 .title {
+  display: flex;
+  flex-direction: column;
   color: rgb(215, 195, 246);
   text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
   font-size: 60px;
   font-family: fantasy;
+}
+
+.new-game {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid  black;
+  font-size: 22px;
+  color: rgb(63, 35, 71);
+  font-weight: 900;
+  font-family: fantasy;
+  background-color: rgba(255, 255, 255, 0.22);
+
 }
