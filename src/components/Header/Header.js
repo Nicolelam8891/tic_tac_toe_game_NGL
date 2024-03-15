@@ -11,9 +11,9 @@ const Header = ({ setShowConfetti, setSquares, setIsTurn, setWinner}) => {
 
   return (
     <main className='header'>
-      <h1 className='title'>TIC TAC TOE</h1>
+      <h1 className='title'><em>TIC-TAC-TOE</em></h1>
       <div className='new-game-section'>
-        <button className='new-game' onClick={() => handleNewGame()}><em>New Game</em></button>
+        <button className='new-game' onClick={() => handleNewGame()}>New Game</button>
       </div>
     </main>
   )
