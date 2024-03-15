@@ -18,3 +18,9 @@
 .jadalynn {
   font-size: 100px;
 }
+
+@media (max-width: 800px) {
+  .player-one {
+    max-width: 80vh;
+  }
+}
