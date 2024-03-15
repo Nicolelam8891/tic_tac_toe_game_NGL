@@ -16,13 +16,26 @@ function App() {
 
 useEffect(() => {
   const currentWinner = checkForWinner(squares); 
-  if (currentWinner && currentWinner !== winner) {
-    setWinner(currentWinner);
+
+  if (currentWinner) {
     setShowConfetti(true);
-  } else if(!currentWinner) {
+    setWinner(currentWinner)
+  } 
+
+  console.log('currentWinner', currentWinner)
+  if (currentWinner === '🐯') {
+    setScores(prevScores => {
+      return {...prevScores, playerOne: prevScores.playerOne + 1}
+    });
+  } else if (currentWinner === '🐉') {
+    setScores(prevScores => {
+      console.log('prevScores', prevScores)
+      return {...prevScores, playerTwo: prevScores.playerTwo + 1}
+    });
+  } else {
     setShowConfetti(false)
   }
-}, [squares, winner])
+}, [squares])
 
   const checkForWinner = (squares) => {
     const lines = [
@@ -50,14 +63,14 @@ useEffect(() => {
       {winner && <Confetti />}
       {winner && <div className='winner-message'>{`Player ${winner} wins!`}</div>}
       <div className="left-sidebar">
-        <PlayerOne setSquares={setSquares} setIsTurn={setIsTurn} setShowConfetti={setShowConfetti} setWinner={setWinner}/>
+        <PlayerOne scores={scores.playerOne} setSquares={setSquares} setIsTurn={setIsTurn} setShowConfetti={setShowConfetti} setWinner={setWinner}/>
       </div>
       <div className="main-content">
-        <Header /> 
-        <Board squares={squares} setSquares={setSquares} isTurn={isTurn} setIsTurn={setIsTurn} checkForWinner={checkForWinner} setWinner={setWinner}/>
+        <Header setSquares={setSquares} setIsTurn={setIsTurn} setWinner={setWinner} setShowConfetti={setShowConfetti}/> 
+        <Board squares={squares} setSquares={setSquares} isTurn={isTurn} setIsTurn={setIsTurn} checkForWinner={checkForWinner} setShowConfetti={setShowConfetti} setWinner={setWinner}/>
       </div>
       <div className="right-sidebar">
-        <PlayerTwo />
+        <PlayerTwo scores={scores.playerTwo} setSquares={setSquares} setIsTurn={setIsTurn} setShowConfetti={setShowConfetti} setWinner={setWinner}/>
       </div>
   </main>
   );

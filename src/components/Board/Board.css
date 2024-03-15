@@ -17,9 +17,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: inset 0 0 10px rgb(215, 195, 246);
+
 }
 
-.new-game {
-  display: flex;
-  flex-direction: column;
+.square:hover {
+  background-color: rgb(251, 229, 250);
 }
+
