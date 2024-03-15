@@ -61,13 +61,14 @@ useEffect(() => {
   return (
     <main className='app'>
       {winner && <Confetti />}
-      {winner && <div className='winner-message'>{`Player ${winner} wins!`}</div>}
+ 
       <div className="left-sidebar">
         <PlayerOne scores={scores.playerOne} setSquares={setSquares} setIsTurn={setIsTurn} setShowConfetti={setShowConfetti} setWinner={setWinner}/>
       </div>
       <div className="main-content">
         <Header setSquares={setSquares} setIsTurn={setIsTurn} setWinner={setWinner} setShowConfetti={setShowConfetti}/> 
         <Board squares={squares} setSquares={setSquares} isTurn={isTurn} setIsTurn={setIsTurn} checkForWinner={checkForWinner} setShowConfetti={setShowConfetti} setWinner={setWinner}/>
+        {winner && <div className='winner-message'>{`Player ${winner} wins!`}</div>}
       </div>
       <div className="right-sidebar">
         <PlayerTwo scores={scores.playerTwo} setSquares={setSquares} setIsTurn={setIsTurn} setShowConfetti={setShowConfetti} setWinner={setWinner}/>
