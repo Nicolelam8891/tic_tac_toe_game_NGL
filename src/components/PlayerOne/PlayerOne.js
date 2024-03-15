@@ -3,8 +3,6 @@ import Board from '../Board/Board';
 
 const PlayerOne = ( {scores, setSquares, setIsTurn, setShowConfetti, setWinner} ) => {
   
-
-
   return (
     <main className='player-one'>
       <h2 className='player-one-title'>Player 1</h2>
