@@ -25,3 +25,11 @@
   background-color: rgb(251, 229, 250);
 }
 
+@media (max-width: 800px) {
+  .square{
+    max-width: 80vh;
+    height: 100px;
+    width: 100px;
+    padding: 10px;
+  }
+}
