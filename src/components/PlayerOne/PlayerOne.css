@@ -25,12 +25,11 @@
   }
 }
 
-@media (min-width: 375px) {
+@media (min-width: 280px) {
   .player-one-title {
-   font-size: 20px;
+   font-size: 14px;
   }
   .jadalynn {
     font-size: 35px
   }
-
  }

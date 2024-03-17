@@ -31,9 +31,9 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-@media (min-width: 375px) {
+@media (min-width: 280px) {
   .player-two-title {
-   font-size: 20px;
+   font-size: 14px;
   }
   .player-score {
     font-size: 15px;
