@@ -18,4 +18,7 @@
 - Terminal 
 - GitHub
 - Vercel
-- Markdown 
+- Markdown
+
+## Preview of App 
+![Tic-Tac-Toe](https://github.com/Nicolelam8891/tic_tac_toe_game_NGL/assets/132624450/dcb82713-a21d-4f38-a1f0-74506c18387f)
