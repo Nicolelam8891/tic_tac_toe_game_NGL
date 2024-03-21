@@ -18,11 +18,10 @@ useEffect(() => {
   const currentWinner = checkForWinner(squares); 
 
   if (currentWinner) {
+    setWinner(currentWinner);
     setShowConfetti(true);
-    setWinner(currentWinner)
   } 
 
-  console.log('currentWinner', currentWinner)
   if (currentWinner === '🐯') {
     setScores(prevScores => {
       return {...prevScores, playerOne: prevScores.playerOne + 1}
@@ -32,8 +31,9 @@ useEffect(() => {
       console.log('prevScores', prevScores)
       return {...prevScores, playerTwo: prevScores.playerTwo + 1}
     });
-  } else {
-    setShowConfetti(false)
+  } else if (!squares.includes(null)) { 
+    setWinner('Draw');
+    setShowConfetti(false);
   }
 }, [squares])
 
@@ -68,7 +68,8 @@ useEffect(() => {
       <div className="main-content">
         <Header setSquares={setSquares} setIsTurn={setIsTurn} setWinner={setWinner} setShowConfetti={setShowConfetti}/> 
         <Board squares={squares} setSquares={setSquares} isTurn={isTurn} setIsTurn={setIsTurn} checkForWinner={checkForWinner} setShowConfetti={setShowConfetti} setWinner={setWinner}/>
-        {winner && <div className='winner-message'>{`Player ${winner} wins!`}</div>}
+        {winner && winner !== 'Draw' && <div className='winner-message'>{`Player ${winner} wins!`}</div>}
+        {winner === 'Draw' && <div className='winner-message'>{"It's a draw!"}</div>}
       </div>
       <div className="right-sidebar">
         <PlayerTwo scores={scores.playerTwo} setSquares={setSquares} setIsTurn={setIsTurn} setShowConfetti={setShowConfetti} setWinner={setWinner}/>
