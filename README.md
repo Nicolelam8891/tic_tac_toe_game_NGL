@@ -13,7 +13,7 @@
 - It took me a little bit longer to figure out the logic to calculate and update the scores
 - This was the first time I used confetti and it was very exciting to implement
 - My daughter loves to play with this
-- I learned a lot creating this app, I am new to the coding world so repetition and coding more frequently has helped me learn more!
+- I learned a lot creating this app, I am new to the coding world so repetition and coding more frequently has helped me learn more
 
 ## Tech
 - Javascript
