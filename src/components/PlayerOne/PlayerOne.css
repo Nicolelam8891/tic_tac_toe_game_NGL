@@ -19,18 +19,22 @@
   font-size: 100px;
 }
 
-@media (max-width: 800px) {
-  .player-one {
-    max-width: 80vh;
-  }
-}
-
-@media (min-width: 375px) {
+@media (min-width: 280px) {
   .player-one-title {
-   font-size: 20px;
+   font-size: 18px;
   }
   .jadalynn {
-    font-size: 35px
+    font-size: 60px
   }
-
  }
+
+@media (min-width: 800px) {
+  .player-one-title {
+    font-size: 40px;
+    text-align: center;
+   }
+   .jadalynn {
+     font-size: 100px
+   }
+}
+

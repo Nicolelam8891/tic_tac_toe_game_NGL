@@ -33,20 +33,22 @@
   background-color: rgb(231, 219, 248);
 }
 
-@media (max-width: 800px) {
-  .square{
-    max-width: 80vh;
-    height: 100px;
-    width: 100px;
-    padding: 10px;
-  }
-}
 
-@media (min-width: 375px) {
+@media (min-width: 280px) {
  .title {
-  font-size: 30px;
+  font-size: 25px;
  }
  .new-game {
   font-size: 16px;
  }
 }
+
+@media (min-width: 800px) {
+  .title {
+    font-size: 60px;
+   }
+   .new-game {
+    font-size: 25px;
+   }
+}
+
