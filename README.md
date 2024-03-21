@@ -8,3 +8,14 @@
 
 ## Site:
 [Visit My Deployed Site](https://tic-tac-toe-game-ngl.vercel.app/)
+
+## Tech
+- Javascript
+- React
+- CSS
+
+## Tools
+- Terminal 
+- GitHub
+- Vercel
+- Markdown 
