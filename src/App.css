@@ -30,6 +30,15 @@ html {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+@media (min-width: 280px) {
+  body {
+    background-position: left;
+  }
+  .winner-message {
+  padding-top: 20px;
+  font-size: 25px;
+  }
+}
 
 @media (min-width: 820px) {
   body {
@@ -38,16 +47,6 @@ html {
 
   .winner-message {
   padding-top: 20px;
-  font-size: 25px;
-  }
-}
-
-@media (min-width: 375px) {
-  body {
-    background-position: left;
-  }
-  .winner-message {
-  padding-top: 20px;
-  font-size: 25px;
+  font-size: 50px;
   }
 }
