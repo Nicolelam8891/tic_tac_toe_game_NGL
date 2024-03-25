@@ -36,8 +36,8 @@
 
 @media (min-width: 800px) {
   .square{
-    height: 180px;
-    width: 180px;
+    height: 145px;
+    width: 145px;
     padding: 10px;
     font-size: 100px;
   }
